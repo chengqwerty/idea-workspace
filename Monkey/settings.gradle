@@ -1,0 +1,4 @@
+rootProject.name = 'Monkey'
+include 'Ssmcg'
+include 'BootStrap'
+

@@ -1,0 +1,27 @@
+## Eclipse Setting Files ##
+.classpath
+.project
+.settings
+
+## Package Files ##
+*.war
+*.ear
+
+## gradle  ##
+.gradle
+build
+bin
+
+
+## other ##
+.DS_Store
+
+## ignore local.properties ##
+WebRoot/WEB-INF/*.local.properties
+
+## idea ##
+GLITS_Web.iml
+GLITS_Web.ipr
+GLITS_Web.iws
+classes
+.idea
