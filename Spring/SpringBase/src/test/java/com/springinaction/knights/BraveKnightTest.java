@@ -7,6 +7,10 @@ import org.junit.Test;
  * Created by Administrator on 2017/5/26.
  */
 public class BraveKnightTest {
+    @Test
+    public void test1(){
+        System.out.println("==========1");
+    }
 
     @Test
     public void knightShouldEmbarkOnQuest(){
