@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>hello world</div>
+<script type="text/javascript">
+    (function () {
+        var _jQuery = window.jQuery,
+            _$ = window.$;
+        var version = "0.0.1",
+            jQuery=function(selector){
+                return new jQuery.fn.init(selector);
+            };
+
+        jQuery.fn=jQuery.prototype={
+            jquery:version,
+            constructor:jQuery,
+            setBackground:function () {
+                this[0].style.background='yellow';
+                return this;
+            },
+            setColor:function () {
+                this[0].style.color='blue';
+                return this;
+            }
+        };
+
+        var init = jQuery.fn.init=function(selector){
+            if(!selector){
+                return this;
+            }else{
+                var elem=document.querySelector(selector);
+                if(elem){
+                    this[0]=elem;
+                    this.length=1;
+                }
+                return this;
+            }
+        };
+
+        init.prototype = jQuery.fn;
+
+        jQuery.extend=jQuery.fn.prototype=function () {
+            console.log(this);
+        };
+
+        window.$=window.jQuery=jQuery;
+    })();
+</script>
+<script type="text/javascript">
+    var $div = $('div');
+    $div.setBackground().setColor();
+</script>
+</body>
+
+</html>

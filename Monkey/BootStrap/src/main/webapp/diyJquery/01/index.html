@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Diy a jQuery</title>
+</head>
+<body>
+<div>
+    <span>前不见古人，后不见来者。</span>
+</div>
+<script type="text/javascript">
+    $ = 'old $';
+    jQuery = 'old JQ'
+</script>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+    var $no=$('');
+    console.log($no);
+    var $span=$('span');
+    console.log($span);
+</script>
+<script type="text/javascript">
+    var $div=$('div');
+    $div.setBackground().setColor();
+
+    var $$$=$.noConflict(true);
+    console.log($);
+    console.log(jQuery);
+    console.log($$$);
+</script>
+</body>
+</html>

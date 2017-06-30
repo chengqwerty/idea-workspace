@@ -38,7 +38,7 @@ dependencies {
             "org.mybatis:mybatis:${mybatisVersion}",
             "org.mybatis:mybatis-spring:1.3.1",
             "commons-dbcp:commons-dbcp:1.4",
-            "com.oracle:ojdbc6:11.2.0.40",
+            //"com.oracle:ojdbc6:11.2.0.40",
 
             "mysql:mysql-connector-java:6.0.6",
 

@@ -9,19 +9,71 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="jedate/skin/jedate.css" rel="stylesheet">
     <style type="text/css">
-        p::before{
-            content: "«";
-            color: blue;
+        .text-center {
+            margin: 5px 0px;
         }
     </style>
 </head>
-<body>
-    <p>绿纱裙，白羽扇</p>
-    <p>珍珠帘开明月满</p>
+<body style="background-color: #f3f3f4">
+<div class="container">
+    <div class="row" style="background-color: #FFFFFF">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="panel panel-default" style="background-color: #FFFFFF">
+                <div class="panel-heading">
+                    <div class="center-block">
+                        <h3 class="text-center">每天一首歌</h3>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span
+                                class="glyphicon glyphicon-calendar"></span></span>
+                        <input id="date01" class="form-control" placeholder="YYYY-MM-DD" aria-describedby="basic-addon1"
+                               value="" readonly="" type="text">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2"><span
+                                class="glyphicon glyphicon-calendar"></span></span>
+                        <div id="date02" class="form-control" aria-describedby="basic-addon1"></div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p class="lead text-center">绿纱裙，白羽扇</p>
+                    <p class="lead text-center">珍珠帘开明月满</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+</div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.2.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.2.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="jedate/jquery.jedate.js"></script>
+<script type="text/javascript">
+    $("#date01").jeDate({
+        format: "YYYY-MM-DD hh:mm:ss",
+        isTime: false,
+        minDate: "2014-09-19 00:00:00",
+        isTime: true
+    });
+    $("#date02").jeDate({
+        format: "YYYY-MM-DD hh:mm:ss",
+        isTime: false,
+        minDate: "2014-09-19 00:00:00",
+        isTime: true
+    });
+</script>
 </body>
 </html>
